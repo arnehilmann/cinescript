@@ -37,6 +37,9 @@
       <button type="button" class="btn btn-default emit-pause" data-toggle="button">
         <i class="fa fa-pause"></i>
       </button>
+      <button type="button" class="btn btn-default emit-skip" data-toggle="button">
+        <i class="fa fa-fast-forward"></i>
+      </button>
     </div>
   </body>
 
@@ -62,6 +65,9 @@
       });
       $('.emit-pause').on('click', function(e) {
         cs.pause();
+      });
+      $('.emit-skip').on('click', function(e) {
+        cs.skip();
       });
     });
   </script>
