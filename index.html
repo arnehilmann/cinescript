@@ -8,6 +8,7 @@
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       }
     </style>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
   </head>
   <body>
     <a href="https://github.com/arnehilmann/cinescript"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
@@ -22,22 +23,46 @@
     And <em>cinescript</em> replays your recordings embedded in your webpage,
     rendered by javascript, hosted on your own server.
 
-    <tt><pre id=term></pre></tt>
+    <div>
+      <tt><pre id="term" class="emit-play"></pre></tt>
+    </div>
 
-    <script src="lib/term.js"></script>
-    <script src="lib/jquery-2.1.0.min.js"></script>
-    <script src="lib/replay.js"></script>
-    <script>
-      $(document).ready(function() {
-          $.get("data/typescript", function(typescript) {
-              $.get("data/timing", function(timing) {
-                  if (typescript && timing) {
-                      replay(typescript, timing, $("#term")[0]);
-                  }
-              }, "text");
-          }, "text");
-      });
-    </script>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default emit-restart">
+        <i class="fa fa-refresh"></i>
+      </button>
+      <button type="button" class="btn btn-default emit-play" data-toggle="button">
+        <i class="fa fa-play"></i>
+      </button>
+      <button type="button" class="btn btn-default emit-pause" data-toggle="button">
+        <i class="fa fa-pause"></i>
+      </button>
+    </div>
   </body>
-</html>
 
+  <script src="lib/term.js"></script>
+  <script src="lib/jquery-2.1.0.min.js"></script>
+  <script src="lib/cinescript.js"></script>
+  <script>
+    $(document).ready(function() {
+      var cs;
+      $.get("data/typescript", function(typescript) {
+        $.get("data/timing", function(timing) {
+          if (typescript && timing) {
+            cs = new CineScript(typescript, timing, $("#term")[0], {'autoplay': true});
+          }
+        }, "text");
+      }, "text");
+
+      $('.emit-restart').on('click', function(e) {
+        cs.restart();
+      });
+      $('.emit-play').on('click', function(e) {
+        cs.play();
+      });
+      $('.emit-pause').on('click', function(e) {
+        cs.pause();
+      });
+    });
+  </script>
+</html>
