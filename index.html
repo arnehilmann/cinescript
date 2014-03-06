@@ -16,22 +16,9 @@
   <body>
     <a href="https://github.com/arnehilmann/cinescript"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
-    <h2>cinescript</h2>
+    <h2>cinescript | replay your terminal sessions</h2>
 
-    <em>cinescript</em> replays your recorded terminal sessions:
-    <ul>
-      <li>embedded in your webpage,</li>
-      <li>rendered by javascript,</li>
-      <li>hosted on your own server.</li>
-    </ul>
-
-    tl;dr
-    <ul>
-      <li>record a terminal session: <tt>script -t 2&gt; timing</tt></li>
-      <li>clone <a href="https://github.com/arnehilmann/cinescript">cinescript</a></li>
-      <li>in your html file, include <tt>lib/*.js</tt> and call <tt>init_cinescript();</tt></li>
-      <li>put your recorded <tt>typescript</tt> and <tt>timing</tt> file in a <tt>data</tt> subfolder.
-    </ul>
+    <em>plain files only, embedded in your webpage, hosted on your own server</em>
 
     <div>
       <tt><pre id="term" class="emit-play"></pre></tt>
@@ -50,6 +37,13 @@
       <button type="button" class="btn btn-default emit-skip" data-toggle="button">
         <i class="fa fa-fast-forward"></i>
       </button>
+    </div>
+
+    <div class="footer">
+      <em>
+        based on <a href="https://github.com/chjj/term.js">term.js</a>,
+        uses <a href="http://jquery.com/">jquery</a>
+      </em> 
     </div>
   </body>
 
