@@ -4,8 +4,11 @@
     <title>cinescript</title>
     <style>
       body {
-        margin: 1em 1em;
+        margin: 2em 2em;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+      #term .terminal {
+        padding: 1ex 1ex;
       }
     </style>
     <link href="css/font-awesome.min.css" rel="stylesheet"/>
@@ -14,14 +17,21 @@
     <a href="https://github.com/arnehilmann/cinescript"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
     <h2>cinescript</h2>
-    The tools <em>script</em> and <em>scriptreplay</em> allow to capture
-    and replay the output on a terminal.
 
-    (Where to get these tools: bsdutils on debian/ubuntu, util-linux-ng on
-    fedora).
+    <em>cinescript</em> replays your recorded terminal sessions:
+    <ul>
+      <li>embedded in your webpage,</li>
+      <li>rendered by javascript,</li>
+      <li>hosted on your own server.</li>
+    </ul>
 
-    And <em>cinescript</em> replays your recordings embedded in your webpage,
-    rendered by javascript, hosted on your own server.
+    tl;dr
+    <ul>
+      <li>record a terminal session: <tt>script -t 2&gt; timing</tt></li>
+      <li>clone <a href="https://github.com/arnehilmann/cinescript">cinescript</a></li>
+      <li>in your html file, include <tt>lib/*.js</tt> and call <tt>init_cinescript();</tt></li>
+      <li>put your recorded <tt>typescript</tt> and <tt>timing</tt> file in a <tt>data</tt> subfolder.
+    </ul>
 
     <div>
       <tt><pre id="term" class="emit-play"></pre></tt>
@@ -45,30 +55,12 @@
 
   <script src="lib/term.js"></script>
   <script src="lib/jquery-2.1.0.min.js"></script>
+  <script src="lib/extend-jquery.js"></script>
   <script src="lib/cinescript.js"></script>
   <script>
     $(document).ready(function() {
-      var cs;
-      $.get("data/typescript", function(typescript) {
-        $.get("data/timing", function(timing) {
-          if (typescript && timing) {
-            cs = new CineScript(typescript, timing, $("#term")[0], {'autoplay': true});
-          }
-        }, "text");
-      }, "text");
-
-      $('.emit-restart').on('click', function(e) {
-        cs.restart();
-      });
-      $('.emit-play').on('click', function(e) {
-        cs.play();
-      });
-      $('.emit-pause').on('click', function(e) {
-        cs.pause();
-      });
-      $('.emit-skip').on('click', function(e) {
-        cs.skip();
-      });
+      //init_cinescript(options={'rows': 62});
+      init_cinescript($("#term")[0]);
     });
   </script>
 </html>
