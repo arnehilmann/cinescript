@@ -1,5 +1,7 @@
-cinescript | replay your terminal sessions
-==========================================
+cinescript
+==========
+
+or: how to showcase your terminal sessions
 
 *plain files only, embedded in your webpage, hosted on your own server*
 
@@ -8,7 +10,7 @@ See the [example](http://arnehilmann.github.io/cinescript/index.html) website...
 tl;dr
 ----
 
-1. record a terminal session: ```script -t 2&gt; timing```
+1. record a terminal session: ```script -t 2> timing```
 
 2. clone [cinescript](https://github.com/arnehilmann/cinescript)
 
