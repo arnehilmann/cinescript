@@ -1,26 +1,25 @@
-cinescript
-==========
+cinescript | replay your terminal sessions
+==========================================
 
-The tools *script* and *scriptreplay* allow to capture and replay the output on a terminal.
-And *cinescript* replays your recordings
-
-* embedded in your webpage,
-
-* hosted on your own server (as static files).
+*plain files only, embedded in your webpage, hosted on your own server*
 
 See the [example](http://arnehilmann.github.io/cinescript/index.html) website...
 
+tl;dr
+----
 
-Based on [term.js](https://github.com/chjj/term.js), inspired
-by [scriptreplay](https://mister-muffin.de/scriptreplay/) and
+1. record a terminal session: ```script -t 2&gt; timing```
+
+2. clone [cinescript](https://github.com/arnehilmann/cinescript)
+
+3. include ```lib/*.js``` and ```init_cinescript()``` in your html
+
+4. put your recorded ```typescript``` and ```timing``` files in the ```data``` subfolder.
+
+Links
+-----
+
+Based on [term.js](https://github.com/chjj/term.js).
+inspired by [scriptreplay](https://mister-muffin.de/scriptreplay/) and
 [asciinema](https://github.com/sickill/asciinema.org)
-
-Prerequisites
--------------
-
-Where to get *script*/*scriptreplay*:
-
-* bsdutils on debian/ubuntu
-
-* util-linux-ng on fedora
 
