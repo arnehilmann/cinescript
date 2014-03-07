@@ -5,7 +5,11 @@ or: how to showcase your terminal sessions
 
 *plain files only, embedded in your webpage, hosted on your own server*
 
-See the [example](http://arnehilmann.github.io/cinescript/index.html) website...
+See the short examples:
+[cowsay](http://arnehilmann.github.io/cinescript/index.html?typescript=examples/cowsay/typescript&timing=examples/cowsay/timing&rows=31&cols=106),
+[vi](http://arnehilmann.github.io/cinescript/index.html?typescript=examples/vi/typescript&timing=examples/vi/timing&rows=31&cols=106),
+[tmux](http://arnehilmann.github.io/cinescript/index.html?typescript=examples/tmux/typescript&timing=examples/tmux/timing&rows=31&cols=106).
+
 
 tl;dr
 ----
