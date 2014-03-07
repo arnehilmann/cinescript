@@ -26,23 +26,20 @@ tl;dr
 Customize
 ---------
 
-In order to provide different terminal sessions, you can define the
-filenames and some other options in the URL (see the examples, too):
+If you want to use your terminal.html file, you can define the
+filenames and some other usefull options in the URL (see the linked examples above, too):
 
-* typescript=<string>: name of the typescript file (created by ```script``` automagically)
+* typescript=[string]: name of the typescript file (created by ```script``` automagically)
 
-* timing=<string>: name of the timing file (created by the ```2> timing``` part)
+* timing=[string]: name of the timing file (created by the ```2> timing``` part)
 
-* rows=<int> / cols=<int>: dimension of the terminal you ran ```script```; needed for
+* rows=[int] / cols=[int]: dimension of the terminal you ran ```script``` in; needed for
     sessions which use fancy ncurses stuff or other fullscreen magic (like vi or tmux)
 
-* speed=<int>: speed factor for replay, default: 2
+* speed=[int]: speed factor for replay, default: 2
 
 To determine the dimension of your terminal, you could use (at least under ubuntu)
-```bash
-tput cols
-tput lines
-```
+```tput cols; tput lines```
 
 Links
 -----
