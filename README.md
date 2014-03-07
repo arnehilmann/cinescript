@@ -22,6 +22,28 @@ tl;dr
 
 4. put your recorded ```typescript``` and ```timing``` files in the ```data``` subfolder.
 
+
+Customize
+---------
+
+In order to provide different terminal sessions, you can define the
+filenames and some other options in the URL (see the examples, too):
+
+* typescript=<string>: name of the typescript file (created by ```script``` automagically)
+
+* timing=<string>: name of the timing file (created by the ```2> timing``` part)
+
+* rows=<int> / cols=<int>: dimension of the terminal you ran ```script```; needed for
+    sessions which use fancy ncurses stuff or other fullscreen magic (like vi or tmux)
+
+* speed=<int>: speed factor for replay, default: 2
+
+To determine the dimension of your terminal, you could use (at least under ubuntu)
+```bash
+tput cols
+tput lines
+```
+
 Links
 -----
 
