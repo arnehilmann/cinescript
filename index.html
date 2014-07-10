@@ -20,6 +20,18 @@
 
     <em>plain files only, embedded in your webpage, hosted on your own server</em>
 
+    <div
+      data-typescript="data/1.typescript"
+      data-timing="data/1.timing"
+      data-autoplay="true"
+      class="cinescript"></div>
+
+    <div
+      data-typescript="data/typescript"
+      data-timing="data/timing"
+      data-autoplay="true"
+      class="cinescript"></div>
+
     <div>
       <tt><pre id="term" class="emit-play"></pre></tt>
     </div>
@@ -43,18 +55,31 @@
       <em>
         based on <a href="https://github.com/chjj/term.js">term.js</a>,
         uses <a href="http://jquery.com/">jquery</a>
-      </em> 
+      </em>
     </div>
   </body>
 
   <script src="lib/term.js"></script>
-  <script src="lib/jquery-2.1.0.min.js"></script>
+  <script src="lib/jquery-2.1.1.min.js"></script>
   <script src="lib/extend-jquery.js"></script>
   <script src="lib/cinescript.js"></script>
   <script>
     $(document).ready(function() {
-      //init_cinescript(options={'rows': 62});
       init_cinescript($("#term")[0]);
+      $('[class="cinescript"]').each(function() {
+        var typescript_filename = this.getAttribute('data-typescript');
+        var timing_filename = this.getAttribute('data-timing');
+        var options = {'autoplay': this.getAttribute('data-autoplay') || false};
+        var pre = document.createElement("pre");
+        this.appendChild(document.createElement("tt").appendChild(pre));
+        $.get(typescript_filename, function(typescript) {
+          $.get(timing_filename, function(timing) {
+            if (typescript && timing) {
+              new CineScript(typescript, timing, pre, options);
+            }
+          }, "text");
+        }, "text");
+      });
     });
   </script>
 </html>
