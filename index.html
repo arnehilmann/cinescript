@@ -10,6 +10,34 @@
       #term .terminal {
         padding: 1ex 1ex;
       }
+
+      .cinescript {
+        position: relative;
+      }
+      .cinescript .overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+        background-color: black;
+        color: grey;
+      }
+      .cinescript:hover .overlay {
+        opacity: .3;
+      }
+      .cinescript:hover .overlay {
+        display: block;
+      }
+      .overlay i {
+        width: 33%;
+      }
+      .overlay i:hover {
+        color: white;
+      }
+
     </style>
     <link href="css/font-awesome.min.css" rel="stylesheet"/>
   </head>
@@ -21,32 +49,10 @@
     <em>plain files only, embedded in your webpage, hosted on your own server</em>
 
     <div
-      data-typescript="data/1.typescript"
-      data-timing="data/1.timing"
-      data-autoplay="true"
-      class="cinescript"></div>
-
-    <div
       data-typescript="data/typescript"
       data-timing="data/timing"
       data-autoplay="true"
-      class="cinescript"></div>
-
-    <div class="cinescript"></div>
-
-    <div class="btn-group">
-      <button type="button" class="btn btn-default emit-restart">
-        <i class="fa fa-refresh"></i>
-      </button>
-      <button type="button" class="btn btn-default emit-play" data-toggle="button">
-        <i class="fa fa-play"></i>
-      </button>
-      <button type="button" class="btn btn-default emit-pause" data-toggle="button">
-        <i class="fa fa-pause"></i>
-      </button>
-      <button type="button" class="btn btn-default emit-skip" data-toggle="button">
-        <i class="fa fa-fast-forward"></i>
-      </button>
+      class="cinescript">
     </div>
 
     <div class="footer">
