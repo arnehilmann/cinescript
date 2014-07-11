@@ -32,9 +32,7 @@
       data-autoplay="true"
       class="cinescript"></div>
 
-    <div>
-      <tt><pre id="term" class="emit-play"></pre></tt>
-    </div>
+    <div class="cinescript"></div>
 
     <div class="btn-group">
       <button type="button" class="btn btn-default emit-restart">
@@ -64,22 +62,6 @@
   <script src="lib/extend-jquery.js"></script>
   <script src="lib/cinescript.js"></script>
   <script>
-    $(document).ready(function() {
-      init_cinescript($("#term")[0]);
-      $('[class="cinescript"]').each(function() {
-        var typescript_filename = this.getAttribute('data-typescript');
-        var timing_filename = this.getAttribute('data-timing');
-        var options = {'autoplay': this.getAttribute('data-autoplay') || false};
-        var pre = document.createElement("pre");
-        this.appendChild(document.createElement("tt").appendChild(pre));
-        $.get(typescript_filename, function(typescript) {
-          $.get(timing_filename, function(timing) {
-            if (typescript && timing) {
-              new CineScript(typescript, timing, pre, options);
-            }
-          }, "text");
-        }, "text");
-      });
-    });
+    $(document).ready(init_cinescripts);
   </script>
 </html>
