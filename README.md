@@ -14,13 +14,13 @@ See the short examples:
 tl;dr
 ----
 
-1. (for color terminals): set 16color mode with ```export TERM=xterm-16colors```
+1. clone [cinescript](https://github.com/arnehilmann/cinescript)
 
-2. record a terminal session: ```script -t 2> timing```
+2. (for color terminals): set 16color mode with ```export TERM=xterm-16colors```
 
-3. clone [cinescript](https://github.com/arnehilmann/cinescript)
+3. record a terminal session: ```script -t 2> timing```
 
-4. include ```lib/*.js``` and ```init_cinescript()``` in your html
+4. include the html snippets from "template.html" in your page
 
 5. put your recorded ```typescript``` and ```timing``` files in the ```data``` subfolder.
 
@@ -28,7 +28,18 @@ tl;dr
 Customize
 ---------
 
-If you want to use your terminal.html file, you can define the
+You can specify parameters to your cinescript element via data- attributes:
+```
+    data-typescript
+    data-timing
+    data-autoplay
+    data-cols
+    data-rows
+    data-speed
+```
+*Note:* The ```cinescript``` class of your html element is important.
+
+Or, if you want to use your terminal.html file, you can define the
 filenames and some other usefull options in the URL (see the linked examples above, too):
 
 * typescript=[string]: name of the typescript file (created by ```script``` automagically)
@@ -39,6 +50,7 @@ filenames and some other usefull options in the URL (see the linked examples abo
     sessions which use fancy ncurses stuff or other fullscreen magic (like vi or tmux)
 
 * speed=[int]: speed factor for replay, default: 2
+
 
 To determine the dimension of your terminal, you could use (at least under ubuntu)
 ```tput cols; tput lines```
