@@ -28,7 +28,8 @@ tl;dr
 Customize
 ---------
 
-You can specify parameters to your cinescript element via data- attributes:
+You can specify parameters to your cinescript element via data- attributes
+(see [template.html](https://github.com/arnehilmann/cinescript/blob/master/template.html)):
 ```
     data-typescript
     data-timing
@@ -37,7 +38,7 @@ You can specify parameters to your cinescript element via data- attributes:
     data-rows
     data-speed
 ```
-*Note:* The ```cinescript``` class of your html element is important.
+*Note:* Your html element **must** have the ```cinescript``` class.
 
 Or, if you want to use your terminal.html file, you can define the
 filenames and some other usefull options in the URL (see the linked examples above, too):
