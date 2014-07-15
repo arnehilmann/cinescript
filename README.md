@@ -14,13 +14,15 @@ See the short examples:
 tl;dr
 ----
 
-1. record a terminal session: ```script -t 2> timing```
+1. (for color terminals): set 16color mode with ```export TERM=xterm-16colors```
 
-2. clone [cinescript](https://github.com/arnehilmann/cinescript)
+2. record a terminal session: ```script -t 2> timing```
 
-3. include ```lib/*.js``` and ```init_cinescript()``` in your html
+3. clone [cinescript](https://github.com/arnehilmann/cinescript)
 
-4. put your recorded ```typescript``` and ```timing``` files in the ```data``` subfolder.
+4. include ```lib/*.js``` and ```init_cinescript()``` in your html
+
+5. put your recorded ```typescript``` and ```timing``` files in the ```data``` subfolder.
 
 
 Customize
