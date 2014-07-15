@@ -59,7 +59,6 @@ To determine the dimension of your terminal, you could use (at least under ubunt
 Links
 -----
 
-Based on [term.js](https://github.com/chjj/term.js).
-inspired by [scriptreplay](https://mister-muffin.de/scriptreplay/) and
-[asciinema](https://github.com/sickill/asciinema.org)
+Based on [term.js](https://github.com/chjj/term.js),
+inspired by [asciinema](https://github.com/sickill/asciinema.org)
 
