@@ -14,9 +14,9 @@ See the short examples:
 tl;dr
 ----
 
-1. clone [cinescript](https://github.com/arnehilmann/cinescript)
+1. ```git clone https://github.com/arnehilmann/cinescript```
 
-2. (for color terminals): set 16color mode with ```export TERM=xterm-16colors```
+2. (for color terminals): set 16color mode with ```export TERM=xterm-16color```
 
 3. record a terminal session: ```script -t 2> timing```
 
