@@ -5,10 +5,7 @@ or: how to showcase your terminal sessions
 
 *plain files only, embedded in your webpage, hosted on your own server*
 
-See the short examples:
-[cowsay](http://arnehilmann.github.io/cinescript/index.html?typescript=examples/cowsay/typescript&timing=examples/cowsay/timing&rows=31&cols=106),
-[vi](http://arnehilmann.github.io/cinescript/index.html?typescript=examples/vi/typescript&timing=examples/vi/timing&rows=31&cols=106),
-[tmux](http://arnehilmann.github.io/cinescript/index.html?typescript=examples/tmux/typescript&timing=examples/tmux/timing&rows=31&cols=106).
+The [minimal example showcase](http://arnehilmann.github.io/cinescript/cinescript-template.html)
 
 
 tl;dr
@@ -29,7 +26,7 @@ Customize
 ---------
 
 You can specify parameters to your cinescript element via data- attributes
-(see [template.html](https://github.com/arnehilmann/cinescript/blob/master/template.html)):
+(see [template.html](https://github.com/arnehilmann/cinescript/blob/master/cinescript-template.html)):
 ```
     data-typescript
     data-timing
