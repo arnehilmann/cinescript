@@ -5,6 +5,7 @@ div.cinescript, .reveal div.cinescript {
 div.cinescript pre, .reveal div.cinescript pre {
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 div.cinescript:hover, .reveal div.cinescript:hover {
 }
