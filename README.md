@@ -16,9 +16,9 @@ git clone https://github.com/arnehilmann/cinescript
 cd cinescript
 export TERM=xterm-16color
 script -t 2> timing
-# type something...
+# type something here...
 exit
-mv typescript timing data/
+mv typescript timing data-example/
 firefox cinescript-template.html
 ```
 
