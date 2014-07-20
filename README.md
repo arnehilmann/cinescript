@@ -11,15 +11,16 @@ The [minimal example showcase](http://arnehilmann.github.io/cinescript/cinescrip
 tl;dr
 ----
 
-1. ```git clone https://github.com/arnehilmann/cinescript```
-
-2. (for color terminals): set 16color mode with ```export TERM=xterm-16color```
-
-3. record a terminal session: ```script -t 2> timing```
-
-4. include the html snippets from "template.html" in your page
-
-5. put your recorded ```typescript``` and ```timing``` files in the ```data``` subfolder.
+```
+git clone https://github.com/arnehilmann/cinescript
+cd cinescript
+export TERM=xterm-16color
+script -t 2> timing
+# type something...
+exit
+mv typescript timing data/
+firefox cinescript-template.html
+```
 
 
 Customize
@@ -28,12 +29,13 @@ Customize
 You can specify parameters to your cinescript element via data- attributes
 (see [template.html](https://github.com/arnehilmann/cinescript/blob/master/cinescript-template.html)):
 ```
-    data-typescript
-    data-timing
-    data-autoplay
-    data-cols
-    data-rows
-    data-speed
+    data-typescript="path/to/typescript/file"
+    data-timing="path/to/timing/file"
+    data-autoplay="true|false"
+    data-cols=nr_of_columns
+    data-rows=nr_of_rows
+    data-speed=typespeed_multiplier
+    data-font-size=console_font_size
 ```
 *Note:* Your html element **must** have the ```cinescript``` class.
 
