@@ -1,9 +1,15 @@
-.cinescript {
+div.cinescript, .reveal div.cinescript {
   position: relative;
+  font-size: 24px;
 }
-.cinescript:hover {
+div.cinescript pre, .reveal div.cinescript pre {
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
-.cinescript .overlay {
+div.cinescript:hover, .reveal div.cinescript:hover {
+}
+div.cinescript .overlay, .reveal div.cinescript .overlay {
   display: none;
   position: absolute;
   top: 0;
@@ -14,7 +20,7 @@
   background-color: black;
   color: grey;
 }
-.cinescript:hover .overlay {
+div.cinescript:hover .overlay, .reveal div.cinescript:hover .overlay {
   display: block;
   opacity: .5;
 }
